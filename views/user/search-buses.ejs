@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results | KL-Easy Trip</title>
+    <!-- TailwindCSS CDN Link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="text-2xl font-bold text-green-600">
+                    <a href="#">KL-Easy Trip</a>
+                </div>
+                <div class="hidden md:flex space-x-6 text-sm font-medium">
+                    <a href="index.html" class="hover:text-green-600">Home</a>
+                    <a href="routes.html" class="hover:text-green-600">Routes</a>
+                    <a href="about.html" class="hover:text-green-600">About</a>
+                    <a href="contact.html" class="hover:text-green-600">Contact</a>
+                    <a href="booking.html" class="hover:text-green-600">Book a Ticket</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Results Section -->
+    <section class="relative bg-cover bg-center bg-no-repeat text-white py-40"
+        style="background-color: rgba(1, 81, 26, 0.785);">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-yellow-100 mb-8 opacity-50">Available Buses</h2>
+
+            <!-- Simulate Dynamic Search Results -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Example of a bus result (Static) -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Kochi → Thiruvananthapuram</h3>
+                    <p class="text-sm text-gray-600">Date: 2025-05-01 | Price: ₹350</p>
+                    <p class="text-sm text-gray-600">Time: 10:00 AM</p>
+                </div>
+
+                <!-- Another static bus result -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800">Kochi → Trivandrum</h3>
+                    <p class="text-sm text-gray-600">Date: 2025-05-01 | Price: ₹400</p>
+                    <p class="text-sm text-gray-600">Time: 11:00 AM</p>
+                </div>
+                <!-- Add more results as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-gray-700 border-t mt-12">
+        <div class="max-w-7xl mx-auto py-10 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold text-green-700 mb-3">About KL-Easy Trip</h3>
+                <p class="text-sm text-gray-600">KL-Easy Trip helps you travel across Kerala easily and affordably.
+                    Safe, Reliable, and Fast. Book your seat with confidence.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-green-700 mb-3">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-green-600">Home</a></li>
+                    <li><a href="routes.html" class="hover:text-green-600">Routes</a></li>
+                    <li><a href="about.html" class="hover:text-green-600">About</a></li>
+                    <li><a href="contact.html" class="hover:text-green-600">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-green-700 mb-3">Contact</h3>
+                <ul class="text-sm space-y-2">
+                    <li>Email: support@kleasytrip.com</li>
+                    <li>Phone: +91 9876543210</li>
+                    <li>Address: Kochi, Kerala, India</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-gray-800 text-center text-white py-3">
+            <p class="text-sm">&copy; 2025 KL-Easy Trip. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

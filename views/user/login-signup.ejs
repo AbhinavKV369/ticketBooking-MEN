@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Signup | KL-Easy Trip</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .form-panel {
+            display: none;
+        }
+
+        #tab-login:checked~.forms #login-form,
+        #tab-signup:checked~.forms #signup-form {
+            display: block;
+        }
+
+        #tab-login:checked~.tabs label[for="tab-login"],
+        #tab-signup:checked~.tabs label[for="tab-signup"] {
+            border-bottom: 4px solid #10B981;
+            color: #10B981;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen px-4">
+
+    <div class="w-full max-w-5xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+
+        <!-- Left Green Background Panel -->
+        <div class="bg-green-600 text-white p-10 md:w-1/2 flex flex-col justify-center items-center relative">
+            <h2 class="text-3xl font-bold mb-4 text-center">KL-Easy Trip</h2>
+            <p class="text-center text-green-100">Seamless bus booking across Kerala. Login or Sign up to start your
+                journey.</p>
+            <img src="https://images.pexels.com/photos/2378278/pexels-photo-2378278.jpeg"
+                alt="Bus" class="w-3/4 mt-6 rounded-lg shadow-lg hidden md:block">
+        </div>
+
+        <!-- Right: Login/Signup Forms -->
+        <div class="md:w-1/2 p-8 bg-white">
+
+            <!-- Radio Tab Toggle -->
+            <input type="radio" name="tab" id="tab-login" class="hidden" checked>
+            <input type="radio" name="tab" id="tab-signup" class="hidden">
+
+            <!-- Tab Buttons -->
+            <div class="tabs flex justify-center gap-10 mb-6 border-b">
+                <label for="tab-login" class="cursor-pointer py-2 px-4 text-gray-700 transition">Login</label>
+                <label for="tab-signup" class="cursor-pointer py-2 px-4 text-gray-700 transition">Signup</label>
+            </div>
+
+            <!-- Form Panels -->
+            <div class="forms">
+
+                <!-- Login Form -->
+                <form id="login-form" class="form-panel space-y-5"  action="http://localhost:5003/login">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" placeholder="you@example.com"
+                            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <input type="password" placeholder="********"
+                            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <button
+                        class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition duration-200">Login</button>
+                </form>
+
+                <!-- Signup Form -->
+                <form id="signup-form" class="form-panel space-y-5" action="http://localhost:5003/signup">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                        <input type="text" placeholder="John Doe"
+                            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" placeholder="you@example.com"
+                            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                        <input type="password" placeholder="********"
+                            class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    </div>
+                    <button
+                        class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition duration-200">Signup</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

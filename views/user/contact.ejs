@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KL-Easy Trip | Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="text-2xl font-bold text-green-600">
+                    <a href="#">KL-Easy Trip</a>
+                </div>
+                <div class="hidden md:flex space-x-6 text-sm font-medium">
+                    <a href="#" class="hover:text-green-600">Home</a>
+                    <a href="routes.html" class="hover:text-green-600">Routes</a>
+                    <a href="about.html" class="hover:text-green-600">About</a>
+                    <a href="contact.html" class="hover:text-green-600">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section with Background Image -->
+    <section class="relative bg-cover bg-center bg-no-repeat py-20 text-white"
+        style="background-image: url('https://images.unsplash.com/photo-1603031590073-2f43a23b6eac?auto=format&fit=crop&w=1950&q=80');">
+        <div class="absolute inset-0 bg-green-900 bg-opacity-80"></div>
+
+        <div class="relative max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white" data-aos="fade-up">Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white text-gray-800 shadow-lg p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold mb-6">Get In Touch</h3>
+                    <form action="#" method="POST">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" id="name" name="name"
+                                class="border border-gray-300 rounded px-4 py-2 w-full" required />
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" id="email" name="email"
+                                class="border border-gray-300 rounded px-4 py-2 w-full" required />
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                class="border border-gray-300 rounded px-4 py-2 w-full" required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition">Send
+                            Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="bg-white text-gray-800 shadow-lg p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold mb-6">Our Contact Info</h3>
+                    <ul class="space-y-4 text-sm text-gray-600">
+                        <li><strong>Email:</strong> support@kleasytrip.com</li>
+                        <li><strong>Phone:</strong> +91 9876543210</li>
+                        <li><strong>Location:</strong> Kochi, Kerala, India</li>
+                    </ul>
+
+                    <div class="mt-8">
+                        <h3 class="text-lg font-semibold mb-3">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-green-600 hover:text-green-700 transition">Facebook</a>
+                            <a href="#" class="text-green-600 hover:text-green-700 transition">Twitter</a>
+                            <a href="#" class="text-green-600 hover:text-green-700 transition">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-gray-700 border-t mt-12">
+        <div class="max-w-7xl mx-auto py-10 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold text-green-700 mb-3">About KL-Easy Trip</h3>
+                <p class="text-sm text-gray-600">KL-Easy Trip helps you travel across Kerala easily and affordably.
+                    Safe,
+                    Reliable, and Fast. Book your seat with confidence.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-green-700 mb-3">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-green-600">Home</a></li>
+                    <li><a href="routes.html" class="hover:text-green-600">Routes</a></li>
+                    <li><a href="about.html" class="hover:text-green-600">About</a></li>
+                    <li><a href="contact.html" class="hover:text-green-600">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold text-green-700 mb-3">Contact</h3>
+                <ul class="text-sm space-y-2">
+                    <li>Email: support@kleasytrip.com</li>
+                    <li>Phone: +91 9876543210</li>
+                    <li>Address: Kochi, Kerala, India</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-gray-800 text-center text-white py-3">
+            <p class="text-sm">&copy; 2025 KL-Easy Trip. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+
+</body>
+
+</html>
