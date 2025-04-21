@@ -5,86 +5,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results | KL-Easy Trip</title>
-    <!-- TailwindCSS CDN Link -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <%- include("partials/head") %>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
-
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+   
+    <%- include("partials/navbar") %>
+  
+    <section class="py-12 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="text-2xl font-bold text-green-600">
-                    <a href="#">KL-Easy Trip</a>
-                </div>
-                <div class="hidden md:flex space-x-6 text-sm font-medium">
-                    <a href="index.html" class="hover:text-green-600">Home</a>
-                    <a href="routes.html" class="hover:text-green-600">Routes</a>
-                    <a href="about.html" class="hover:text-green-600">About</a>
-                    <a href="contact.html" class="hover:text-green-600">Contact</a>
-                    <a href="booking.html" class="hover:text-green-600">Book a Ticket</a>
+            <div class="mb-8">
+                <h2 class="text-2xl font-semibold text-gray-700">
+                    Results for Buses from <span class="font-bold text-green-600">Kochi</span> to <span
+                        class="font-bold text-green-600">Thiruvananthapuram</span> on <span
+                        class="font-bold text-green-600">May 1, 2025</span>
+                </h2>
+            </div>
+
+            <div class="mb-6 flex items-center space-x-4">
+                <div class="relative">
+                    <select
+                        class="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-2 px-3 pr-8 rounded leading-tight focus:outline-none focus:border-green-500">
+                        <option>Sort by: Price (Low to High)</option>
+                        <option>Sort by: Price (High to Low)</option>
+                        <option>Sort by: Departure Time (Earliest)</option>
+                        <option>Sort by: Departure Time (Latest)</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
 
-    <!-- Search Results Section -->
-    <section class="relative bg-cover bg-center bg-no-repeat text-white py-40"
-        style="background-color: rgba(1, 81, 26, 0.785);">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-yellow-100 mb-8 opacity-50">Available Buses</h2>
-
-            <!-- Simulate Dynamic Search Results -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- Example of a bus result (Static) -->
-                <div class="bg-white shadow-lg rounded-lg p-6">
-                    <h3 class="text-lg font-semibold text-gray-800">Kochi → Thiruvananthapuram</h3>
-                    <p class="text-sm text-gray-600">Date: 2025-05-01 | Price: ₹350</p>
-                    <p class="text-sm text-gray-600">Time: 10:00 AM</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Kochi → Thiruvananthapuram</h3>
+                        <p class="text-sm text-gray-600 mb-1">Operator: Kallada Travels</p>
+                        <div class="flex justify-between items-center mb-2">
+                            <p class="text-sm text-gray-600">Departure: <span class="font-semibold">10:00 AM</span></p>
+                            <p class="text-sm text-gray-600">Arrival: <span class="font-semibold">01:00 PM</span></p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-xl font-bold text-green-700">₹350</p>
+                            <button
+                                class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md">
+                                Select Seats
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">5 seats available</p>
+                    </div>
                 </div>
 
-                <!-- Another static bus result -->
-                <div class="bg-white shadow-lg rounded-lg p-6">
-                    <h3 class="text-lg font-semibold text-gray-800">Kochi → Trivandrum</h3>
-                    <p class="text-sm text-gray-600">Date: 2025-05-01 | Price: ₹400</p>
-                    <p class="text-sm text-gray-600">Time: 11:00 AM</p>
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Kochi → Trivandrum</h3>
+                        <p class="text-sm text-gray-600 mb-1">Operator: KSRTC Swift</p>
+                        <div class="flex justify-between items-center mb-2">
+                            <p class="text-sm text-gray-600">Departure: <span class="font-semibold">11:30 AM</span></p>
+                            <p class="text-sm text-gray-600">Arrival: <span class="font-semibold">02:30 PM</span></p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-xl font-bold text-green-700">₹400</p>
+                            <button
+                                class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md">
+                                Select Seats
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">12 seats available</p>
+                    </div>
                 </div>
-                <!-- Add more results as needed -->
+
+                <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Ernakulam → Thiruvananthapuram</h3>
+                        <p class="text-sm text-gray-600 mb-1">Operator: Orange Travels</p>
+                        <div class="flex justify-between items-center mb-2">
+                            <p class="text-sm text-gray-600">Departure: <span class="font-semibold">02:00 PM</span></p>
+                            <p class="text-sm text-gray-600">Arrival: <span class="font-semibold">05:30 PM</span></p>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-xl font-bold text-green-700">₹450</p>
+                            <button
+                                class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-md">
+                                Select Seats
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">20 seats available</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-8 text-center text-gray-600 hidden">
+                <p>No buses found for the selected criteria.</p>
+                <p class="mt-2">Please try different dates or routes.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-white text-gray-700 border-t mt-12">
-        <div class="max-w-7xl mx-auto py-10 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-                <h3 class="text-lg font-semibold text-green-700 mb-3">About KL-Easy Trip</h3>
-                <p class="text-sm text-gray-600">KL-Easy Trip helps you travel across Kerala easily and affordably.
-                    Safe, Reliable, and Fast. Book your seat with confidence.</p>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold text-green-700 mb-3">Quick Links</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="index.html" class="hover:text-green-600">Home</a></li>
-                    <li><a href="routes.html" class="hover:text-green-600">Routes</a></li>
-                    <li><a href="about.html" class="hover:text-green-600">About</a></li>
-                    <li><a href="contact.html" class="hover:text-green-600">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold text-green-700 mb-3">Contact</h3>
-                <ul class="text-sm space-y-2">
-                    <li>Email: support@kleasytrip.com</li>
-                    <li>Phone: +91 9876543210</li>
-                    <li>Address: Kochi, Kerala, India</li>
-                </ul>
-            </div>
-        </div>
-        <div class="bg-gray-800 text-center text-white py-3">
-            <p class="text-sm">&copy; 2025 KL-Easy Trip. All rights reserved.</p>
-        </div>
-    </footer>
+<!-- Footer -->
+<%- include("partials/footer") %>
 
 </body>
 

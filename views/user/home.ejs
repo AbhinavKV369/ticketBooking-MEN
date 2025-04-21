@@ -5,72 +5,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KL-Easy Trip | Kerala Bus Booking</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Alpine.js for navbar toggle -->
-    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
-    <!-- AOS for animations -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- head -->
+    <%- include("partials/head") %>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <%- include("partials/navbar") %>
 
-  
+        <!-- Hero Section -->
+        <section class="relative bg-cover bg-center bg-no-repeat text-white py-40"
+            style="background-image: url('https://images.pexels.com/photos/31643020/pexels-photo-31643020/free-photo-of-serene-river-landscape-in-ramamangalam-kerala.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
+            <div class="absolute inset-0 bg-green-800 bg-opacity-80"></div>
 
-    <!-- Hero Section with Background Image -->
-    <section class="relative bg-cover bg-center bg-no-repeat text-white py-40"
-        style="background-image: url('https://images.pexels.com/photos/31643020/pexels-photo-31643020/free-photo-of-serene-river-landscape-in-ramamangalam-kerala.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');">
-        <!-- Green overlay -->
-        <div class="absolute inset-0 bg-green-800 bg-opacity-80"></div>
-
-        <div class="relative max-w-4xl mx-auto px-6 text-center">
-            <h1 class="text-4xl font-bold mb-4" data-aos="fade-up">Explore Kerala by Bus</h1>
-            <p class="text-lg mb-8" data-aos="fade-up" data-aos-delay="100">
-                Book your bus tickets for top routes across God’s Own Country with KL-Easy Trip.
-            </p>
-            <div class="bg-white rounded-lg shadow-lg p-6 max-w-3xl mx-auto text-gray-800" data-aos="zoom-in"
-                data-aos-delay="200">
-                <form class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                    <input type="text" placeholder="From (e.g., Kochi)"
-                        class="border border-gray-300 rounded px-4 py-2 w-full">
-                    <input type="text" placeholder="To (e.g., Thiruvananthapuram)"
-                        class="border border-gray-300 rounded px-4 py-2 w-full">
-                    <input type="date" class="border border-gray-300 rounded px-4 py-2 w-full">
-                    <button type="submit"
-                        class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 w-full transition duration-300">Search</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Popular Routes -->
-    <section class="py-12">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-2xl font-bold text-center mb-8 text-green-700" data-aos="fade-up">Popular Routes in Kerala
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              
-                <div class="bg-white shadow-md p-4 rounded hover:scale-105 transition" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <h3 class="text-lg font-semibold">Kochi → Thiruvananthapuram</h3>
-                    <p class="text-sm text-gray-600">Starting from ₹350</p>
+            <div class="relative max-w-4xl mx-auto px-6 text-center">
+                <h1 class="text-4xl font-bold mb-4" data-aos="fade-up">Explore Kerala by Bus</h1>
+                <p class="text-lg mb-8" data-aos="fade-up" data-aos-delay="100">
+                    Book your bus tickets for top routes across God’s Own Country with KL-Easy Trip.
+                </p>
+                <div class="bg-white rounded-lg shadow-lg p-6 max-w-3xl mx-auto text-gray-800" data-aos="zoom-in"
+                    data-aos-delay="200">
+                    <form class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <input type="text" placeholder="From (e.g., Kochi)"
+                            class="border border-gray-300 rounded px-4 py-2 w-full">
+                        <input type="text" placeholder="To (e.g., Thiruvananthapuram)"
+                            class="border border-gray-300 rounded px-4 py-2 w-full">
+                        <input type="date" class="border border-gray-300 rounded px-4 py-2 w-full">
+                        <button type="submit"
+                            class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 w-full transition duration-300">Search</button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-  
-    <!-- AOS Script -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: true
-        });
-    </script>
+        <!-- Popular Routes Section -->
+        <section class="py-12">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-2xl font-bold text-center mb-8 text-green-700" data-aos="fade-up">Popular Routes in
+                    Kerala
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
+                    <div class="bg-white shadow-md p-4 rounded hover:scale-105 transition" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <h3 class="text-lg font-semibold">Kochi → Thiruvananthapuram</h3>
+                        <p class="text-sm text-gray-600">Starting from ₹350</p>
+                    </div>
+                    <div class="bg-white shadow-md p-4 rounded hover:scale-105 transition" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <h3 class="text-lg font-semibold">Kozhikode → Kochi</h3>
+                        <p class="text-sm text-gray-600">Starting from ₹400</p>
+                    </div>
+                    <div class="bg-white shadow-md p-4 rounded hover:scale-105 transition" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <h3 class="text-lg font-semibold">Thiruvananthapuram → Kollam</h3>
+                        <p class="text-sm text-gray-600">Starting from ₹200</p>
+                    </div>
+                    <div class="bg-white shadow-md p-4 rounded hover:scale-105 transition" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <h3 class="text-lg font-semibold">Thrissur → Munnar</h3>
+                        <p class="text-sm text-gray-600">Starting from ₹280</p>
+                    </div>
+                    <div class="bg-white shadow-md p-4 rounded hover:scale-105 transition" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <h3 class="text-lg font-semibold">Alappuzha → Ernakulam</h3>
+                        <p class="text-sm text-gray-600">Starting from ₹150</p>
+                    </div>
+                    <div class="bg-white shadow-md p-4 rounded hover:scale-105 transition" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <h3 class="text-lg font-semibold">Kannur → Wayanad</h3>
+                        <p class="text-sm text-gray-600">Starting from ₹320</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <%- include("partials/footer") %>
+
+            <!-- Optional: Include AOS JS initialization and other scripts if needed -->
+            <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    AOS.init({
+                        duration: 500, // Animation duration in ms
+                        once: true, // Whether animations should happen once
+                    });
+                });
+            </script>
 </body>
 
 </html>

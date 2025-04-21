@@ -1,36 +1,53 @@
 <!-- Navbar -->
-<nav x-data="{ open: false }" class="bg-white shadow-md sticky top-0 z-50">
+<nav x-data="{ open: false, darkMode: false }" class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 items-center">
+            <!-- Logo -->
             <div class="text-2xl font-bold text-green-600">
                 <a href="#">KL-Easy Trip</a>
             </div>
-            <div class="hidden md:flex space-x-6 text-sm font-medium">
-                <a href="#" class="hover:text-green-600">Home</a>
-                <a href="#" class="hover:text-green-600">Routes</a>
-                <a href="#" class="hover:text-green-600">About</a>
-                <a href="#" class="hover:text-green-600">Contact</a>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="/" class="hover:text-green-600">Home</a>
+                <a href="/search-buses" class="hover:text-green-600">Search Buses</a>
+                <a href="/about" class="hover:text-green-600">About</a>
+                <a href="/contact" class="hover:text-green-600">Contact</a>
+
+                <!-- Search bar -->
+                <input type="text" placeholder="Search..."
+                    class="px-3 py-1 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-green-300">
             </div>
+
+            <!-- Login Button -->
             <div class="hidden md:block">
-                <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Login</button>
+                <a href="/login"
+                    class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">Login</a>
             </div>
+
+            <!-- Mobile Menu Button -->
             <div class="md:hidden">
                 <button @click="open = !open" class="text-green-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
-                        <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    </svg>
+                    <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
         </div>
     </div>
+
+    <!-- Mobile Menu -->
     <div x-show="open" class="md:hidden px-4 pb-4 space-y-2">
-        <a href="#" class="block text-sm text-gray-700 hover:text-green-600">Home</a>
-        <a href="#" class="block text-sm text-gray-700 hover:text-green-600">Routes</a>
-        <a href="#" class="block text-sm text-gray-700 hover:text-green-600">About</a>
-        <a href="#" class="block text-sm text-gray-700 hover:text-green-600">Contact</a>
-        <button class="w-full mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Login</button>
+        <a href="/" class="block text-sm text-gray-700 hover:text-green-600">Home</a>
+        <a href="/search-buses" class="block text-sm text-gray-700 hover:text-green-600">Search Buses</a>
+        <a href="/about" class="block text-sm text-gray-700 hover:text-green-600">About</a>
+        <a href="/contact" class="block text-sm text-gray-700 hover:text-green-600">Contact</a>
+        <a href="/login"
+            class="block w-full mt-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-center">Login</a>
     </div>
 </nav>

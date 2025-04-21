@@ -2,128 +2,105 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KL-Easy Trip | Contact Us</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | KL-Easy Trip</title>
+
+    <%- include("partials/head") %>
+
+        <style>
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+        </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
     <!-- Navbar -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="text-2xl font-bold text-green-600">
-                    <a href="#">KL-Easy Trip</a>
-                </div>
-                <div class="hidden md:flex space-x-6 text-sm font-medium">
-                    <a href="#" class="hover:text-green-600">Home</a>
-                    <a href="routes.html" class="hover:text-green-600">Routes</a>
-                    <a href="about.html" class="hover:text-green-600">About</a>
-                    <a href="contact.html" class="hover:text-green-600">Contact</a>
-                </div>
+    <%- include("partials/navbar") %>
+        <!-- Hero Section -->
+        <section class="bg-green-100 py-16">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h1 class="text-4xl font-bold text-green-700 mb-4">Contact Us</h1>
+                <p class="text-xl text-gray-600">We'd love to hear from you! Get in touch for any inquiries, feedback,
+                    or
+                    support.</p>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- Contact Section with Background Image -->
-    <section class="relative bg-cover bg-center bg-no-repeat py-20 text-white"
-        style="background-image: url('https://images.unsplash.com/photo-1603031590073-2f43a23b6eac?auto=format&fit=crop&w=1950&q=80');">
-        <div class="absolute inset-0 bg-green-900 bg-opacity-80"></div>
+        <!-- Contact Form and Info -->
+        <section class="py-12">
+            <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-2xl font-semibold text-green-700 mb-4">Get in Touch</h2>
+                    <p class="text-lg text-gray-700 mb-6">Feel free to reach out to us via phone, email, or by visiting
+                        our
+                        office.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M5 4a2 2 0 012-2h6a2 2 0 012 2v4h2a2 2 0 012 2v6a2 2 0 01-2 2H3a2 2 0 01-2-2V10a2 2 0 012-2H5V4z" />
+                                <path d="M9 12a1 1 0 002 0v-2a1 1 0 00-2 0v2z" />
+                            </svg>
+                            <span>Kochi, Kerala, India</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M2 3a1 1 0 011-1h14a1 1 0 011 1v14a1 1 0 01-1 1H3a1 1 0 01-1-1V3zM10 13a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                            </svg>
+                            <span>+91 9876543210</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V15a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                            <span>support@kleasytrip.com</span>
+                        </li>
+                    </ul>
+                </div>
 
-        <div class="relative max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white" data-aos="fade-up">Contact Us</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <!-- Contact Form -->
-                <div class="bg-white text-gray-800 shadow-lg p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="text-xl font-semibold mb-6">Get In Touch</h3>
-                    <form action="#" method="POST">
-                        <div class="mb-4">
-                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
-                            <input type="text" id="name" name="name"
-                                class="border border-gray-300 rounded px-4 py-2 w-full" required />
+                <div>
+                    <h2 class="text-2xl font-semibold text-green-700 mb-4">Send Us a Message</h2>
+                    <form class="space-y-4"
+                        onsubmit="event.preventDefault(); alert('Message sent! We will get back to you soon.')">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your name"
+                                class="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-green-500 focus:border-green-500">
                         </div>
-                        <div class="mb-4">
+                        <div>
                             <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
-                            <input type="email" id="email" name="email"
-                                class="border border-gray-300 rounded px-4 py-2 w-full" required />
+                            <input type="email" id="email" placeholder="Enter your email"
+                                class="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-green-500 focus:border-green-500">
                         </div>
-                        <div class="mb-4">
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                            <input type="text" id="email" placeholder="Enter your Subject" name="subject"
+                                class="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-green-500 focus:border-green-500">
+                        </div>
+                        <div>
                             <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea id="message" name="message" rows="4"
-                                class="border border-gray-300 rounded px-4 py-2 w-full" required></textarea>
+                            <textarea id="message" rows="4" placeholder="Enter your message"
+                                class="mt-1 block w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-green-500 focus:border-green-500"></textarea>
                         </div>
                         <button type="submit"
-                            class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition">Send
+                            class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-md">Send
                             Message</button>
                     </form>
                 </div>
-
-                <!-- Contact Info -->
-                <div class="bg-white text-gray-800 shadow-lg p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="text-xl font-semibold mb-6">Our Contact Info</h3>
-                    <ul class="space-y-4 text-sm text-gray-600">
-                        <li><strong>Email:</strong> support@kleasytrip.com</li>
-                        <li><strong>Phone:</strong> +91 9876543210</li>
-                        <li><strong>Location:</strong> Kochi, Kerala, India</li>
-                    </ul>
-
-                    <div class="mt-8">
-                        <h3 class="text-lg font-semibold mb-3">Follow Us</h3>
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-green-600 hover:text-green-700 transition">Facebook</a>
-                            <a href="#" class="text-green-600 hover:text-green-700 transition">Twitter</a>
-                            <a href="#" class="text-green-600 hover:text-green-700 transition">Instagram</a>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="bg-white text-gray-700 border-t mt-12">
-        <div class="max-w-7xl mx-auto py-10 px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-                <h3 class="text-lg font-semibold text-green-700 mb-3">About KL-Easy Trip</h3>
-                <p class="text-sm text-gray-600">KL-Easy Trip helps you travel across Kerala easily and affordably.
-                    Safe,
-                    Reliable, and Fast. Book your seat with confidence.</p>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold text-green-700 mb-3">Quick Links</h3>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-green-600">Home</a></li>
-                    <li><a href="routes.html" class="hover:text-green-600">Routes</a></li>
-                    <li><a href="about.html" class="hover:text-green-600">About</a></li>
-                    <li><a href="contact.html" class="hover:text-green-600">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-lg font-semibold text-green-700 mb-3">Contact</h3>
-                <ul class="text-sm space-y-2">
-                    <li>Email: support@kleasytrip.com</li>
-                    <li>Phone: +91 9876543210</li>
-                    <li>Address: Kochi, Kerala, India</li>
-                </ul>
-            </div>
-        </div>
-        <div class="bg-gray-800 text-center text-white py-3">
-            <p class="text-sm">&copy; 2025 KL-Easy Trip. All rights reserved.</p>
-        </div>
-    </footer>
 
-    <!-- AOS Script -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: true
-        });
-    </script>
+        <!-- Footer -->
+        <%- include("partials/footer") %>
+
 
 </body>
 
