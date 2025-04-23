@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Users | KL-Easy Trip</title>
+<%- include("partials/head") %>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navbar -->
+    <%- include("partials/navbar") %>
+
+        <!-- Header -->
+        <section class="bg-green-800 text-white py-6 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <h1 class="text-xl sm:text-2xl font-bold">Manage Users</h1>
+            </div>
+        </section>
+
+        <!-- Users Table -->
+        <section class="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="bg-white p-4 sm:p-6 rounded shadow">
+                <h2 class="text-lg sm:text-xl font-semibold mb-4">User List</h2>
+                <div class="w-full overflow-x-auto">
+                    <table class="min-w-full border text-sm sm:text-base">
+                        <thead>
+                            <tr class="bg-gray-100 text-left">
+                                <th class="px-4 py-2 border">Name</th>
+                                <th class="px-4 py-2 border">Email</th>
+                                <th class="px-4 py-2 border">Phone</th>
+                                <th class="px-4 py-2 border text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Repeat this row for each user -->
+                            <tr class="border-b">
+                                <td class="px-4 py-2">Anjali Kumar</td>
+                                <td class="px-4 py-2">anjali@example.com</td>
+                                <td class="px-4 py-2">9876543210</td>
+                                <td class="px-4 py-2 text-center whitespace-nowrap">
+                                    <a href="/users/edit/1" class="text-blue-600 hover:underline mr-2">Edit</a>
+                                    <form action="/users/delete/1" method="POST" class="inline">
+                                        <button type="submit" class="text-red-600 hover:underline">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <!-- Repeat ends -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+</body>
+
+</html>

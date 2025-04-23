@@ -5,102 +5,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | KL-Easy Trip</title>
-    <%- include("partials/head")  %>
+    <meta name="description"
+        content="Learn about KL-Easy Trip, Kerala's trusted platform for hassle-free bus booking and seamless travel experiences.">
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <%- include("partials/head") %>
 </head>
 
 <body class="bg-gray-100 text-gray-800">
-   
+
     <%- include("partials/navbar") %>
 
-    <section class="bg-green-200 py-20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl font-bold text-green-800 mb-6">About KL-Easy Trip</h1>
-            <p class="text-xl text-gray-700 leading-relaxed">Your trusted partner for seamless bus travel across the
-                beautiful state of Kerala.</p>
-        </div>
-    </section>
-
-    <section class="py-16">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-semibold text-green-800 mb-6">Our Story</h2>
-                <p class="text-lg text-gray-700 mb-6 leading-relaxed">Born from a passion for simplifying travel within
-                    Kerala, KL-Easy Trip was founded in [Year of Founding] by a team of local enthusiasts who understood
-                    the need for a reliable and user-friendly bus booking platform. We recognized the challenges faced
-                    by travelers in navigating the diverse bus network and aimed to create a one-stop solution for all
-                    their booking needs.</p>
-                <p class="text-lg text-gray-700 leading-relaxed">From our humble beginnings in Kochi, we've grown to
-                    connect travelers with a wide range of bus operators, ensuring access to comfortable and convenient
-                    journeys across Kerala's scenic routes. Our commitment to ease of use, transparency, and customer
-                    satisfaction drives everything we do.</p>
+        <!-- Hero Section -->
+        <section class="bg-green-200 py-20">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h1 class="text-5xl font-bold text-green-800 mb-6">About KL-Easy Trip</h1>
+                <p class="text-xl text-gray-700">Your trusted partner for seamless bus travel across the beautiful state
+                    of Kerala.</p>
             </div>
-            <div>
-                <img src="./download.png" alt="Our Founding Team"
-                    class="rounded-md shadow-md object-cover">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="py-16 bg-green-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-semibold text-green-800 mb-6">Our Mission</h2>
-            <p class="text-lg text-gray-700 leading-relaxed mb-6">Our mission is to empower every traveler in Kerala
-                with a seamless and stress-free bus booking experience. We strive to:</p>
-            <ul class="mt-6 space-y-3 text-lg text-gray-700 list-none pl-0">
-                <li class="flex items-center"><i class="fa-solid fa-bus mr-3 text-green-500"></i> Provide a
-                    comprehensive platform connecting travelers with a wide network of bus operators.</li>
-                <li class="flex items-center"><i class="fa-solid fa-hand-point-up mr-3 text-green-500"></i> Offer a
-                    user-friendly interface that makes searching, comparing, and booking tickets effortless.</li>
-                <li class="flex items-center"><i class="fa-solid fa-tag mr-3 text-green-500"></i> Ensure transparency in
-                    pricing and booking information.</li>
-                <li class="flex items-center"><i class="fa-solid fa-headset mr-3 text-green-500"></i> Deliver reliable
-                    customer support to assist travelers at every step of their journey.</li>
-                <li class="flex items-center"><i class="fa-solid fa-rocket mr-3 text-green-500"></i> Continuously
-                    innovate and improve our services to meet the evolving needs of our users.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="py-16">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-semibold text-green-800 mb-8 text-center">Our Core Values</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="text-center p-6 rounded-md shadow-sm hover:shadow-md transition duration-300">
-                    <svg class="mx-auto h-14 w-14 text-green-500 mb-4" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 5l-14 7a2 2 0 000 3l14 7M5 5l1 9.5M5 5l7-3" />
-                    </svg>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Reliability</h3>
-                    <p class="text-gray-600 leading-relaxed">We are committed to providing a dependable platform and
-                        ensuring a smooth booking process.</p>
+        <!-- Our Story -->
+        <section class="py-16">
+            <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-semibold text-green-800 mb-6">Our Story</h2>
+                    <p class="text-lg text-gray-700 mb-6">Born from a passion for simplifying travel within Kerala,
+                        KL-Easy Trip was founded in <strong>2021</strong> by a team of local enthusiasts who understood
+                        the need for a reliable and user-friendly bus booking platform.</p>
+                    <p class="text-lg text-gray-700">From our humble beginnings in Kochi, we've grown to connect
+                        travelers with a wide range of bus operators, ensuring access to comfortable and convenient
+                        journeys across Kerala's scenic routes.</p>
                 </div>
-                <div class="text-center p-6 rounded-md shadow-sm hover:shadow-md transition duration-300">
-                    <svg class="mx-auto h-14 w-14 text-green-500 mb-4" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M10 20l4-16m4 4l-4 16M21 9l-6 6m6 6l-3-3m3-3l-6-6" />
-                    </svg>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Ease of Use</h3>
-                    <p class="text-gray-600 leading-relaxed">We prioritize a simple and intuitive interface for a
-                        hassle-free booking experience.</p>
-                </div>
-                <div class="text-center p-6 rounded-md shadow-sm hover:shadow-md transition duration-300">
-                    <svg class="mx-auto h-14 w-14 text-green-500 mb-4" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Connectivity</h3>
-                    <p class="text-gray-600 leading-relaxed">We aim to connect travelers with the widest possible
-                        network of bus operators across Kerala.</p>
+                <div>
+                    <img loading="lazy"
+                        src="https://sdmntpraustraliaeast.oaiusercontent.com/files/00000000-c03c-61fa-9565-f0439b968f66/raw"
+                        alt="KL-Easy Trip founding team posing together in Kochi"
+                        class="rounded-md shadow-md object-cover">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <%- include("partials/footer") %>
+        <!-- Mission -->
+        <section class="py-16 bg-green-50">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-semibold text-green-800 mb-6">Our Mission</h2>
+                <p class="text-lg text-gray-700 mb-6">Our mission is to empower every traveler in Kerala with a seamless
+                    and stress-free bus booking experience. We strive to:</p>
+                <ul class="space-y-3 text-lg text-gray-700 list-none">
+                    <li class="flex items-center justify-center"><i class="fa-solid fa-bus mr-3 text-green-500"></i>
+                        Connect travelers with a wide network of bus operators.</li>
+                    <li class="flex items-center justify-center"><i
+                            class="fa-solid fa-hand-point-up mr-3 text-green-500"></i> Offer a user-friendly interface
+                        for easy ticket booking.</li>
+                    <li class="flex items-center justify-center"><i class="fa-solid fa-tag mr-3 text-green-500"></i>
+                        Ensure transparency in pricing and bookings.</li>
+                    <li class="flex items-center justify-center"><i class="fa-solid fa-headset mr-3 text-green-500"></i>
+                        Provide reliable customer support throughout the journey.</li>
+                    <li class="flex items-center justify-center"><i class="fa-solid fa-rocket mr-3 text-green-500"></i>
+                        Continuously innovate to meet user needs.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Core Values -->
+        <section class="py-16">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-3xl font-semibold text-green-800 mb-8 text-center">Our Core Values</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div class="text-center p-6 rounded-md shadow-sm hover:shadow-md transition duration-300">
+                        <svg class="mx-auto h-14 w-14 text-green-500 mb-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 5l-14 7a2 2 0 000 3l14 7M5 5l1 9.5M5 5l7-3" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Reliability</h3>
+                        <p class="text-gray-600">We are committed to dependable service and smooth booking experiences.
+                        </p>
+                    </div>
+                    <div class="text-center p-6 rounded-md shadow-sm hover:shadow-md transition duration-300">
+                        <svg class="mx-auto h-14 w-14 text-green-500 mb-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l-4 16M21 9l-6 6m6 6l-3-3m3-3l-6-6" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Ease of Use</h3>
+                        <p class="text-gray-600">We prioritize simplicity and intuitive design for every user.</p>
+                    </div>
+                    <div class="text-center p-6 rounded-md shadow-sm hover:shadow-md transition duration-300">
+                        <svg class="mx-auto h-14 w-14 text-green-500 mb-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Connectivity</h3>
+                        <p class="text-gray-600">We aim to connect travelers with the largest possible operator network
+                            in Kerala.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <%- include("partials/footer") %>
 </body>
 
 </html>

@@ -1,0 +1,58 @@
+<!-- Navbar -->
+<nav x-data="{ open: false, darkMode: false }"
+    :class="{ 'bg-gray-900 text-white': darkMode, 'bg-white text-black': !darkMode }"
+    class="shadow-md sticky top-0 z-50 transition-colors duration-300">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-bold text-green-600">
+                <a href="#">KL-Easy Trip</a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="/admin" class="hover:text-green-600">Dashboard</a>
+                <a href="/admin/manage-users" class="hover:text-green-600">Manage Users</a>
+                <a href="/admin/add-bus" class="hover:text-green-600">Add Bus</a>
+                <a href="/admin/manage-buses" class="hover:text-green-600">Manage Buses</a>
+                <a href="/admin/add-routes" class="hover:text-green-600">Add Routes</a>
+                <a href="/admin/manage-routes" class="hover:text-green-600">Manage Routes</a>
+                <a href="/admin/view-bookings" class="hover:text-green-600">View Bookings</a>
+            </div>
+
+            <!-- Right Side Icons -->
+            <div class="flex items-center space-x-4">
+
+                <!-- Mobile Menu Toggle -->
+                <div class="md:hidden">
+                    <button @click="open = !open" class="text-green-600 focus:outline-none" aria-label="Toggle menu">
+                        <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-show="open" x-transition class="md:hidden px-4 pb-4 space-y-3">
+        <a href="/admin" class="block text-sm text-gray-700 hover:text-green-600">Dashboard</a>
+        <a href="/admin/manage-users" class="block text-sm text-gray-700 hover:text-green-600">Manage Users</a>
+        <a href="/admin/add-bus" class="block text-sm text-gray-700 hover:text-green-600">Add Bus</a>
+        <a href="/admin/manage-buses" class="block text-sm text-gray-700 hover:text-green-600">Manage Buses</a>
+        <a href="/admin/add-routes" class="block text-sm text-gray-700 hover:text-green-600">Add Routes</a>
+        <a href="/admin/manage-routes" class="block text-sm text-gray-700 hover:text-green-600">Manage Routes</a>
+        <a href="/admin/view-bookings" class="block text-sm text-gray-700 hover:text-green-600">View Bookings</a>
+
+        <!-- Optional Mobile Search -->
+        <input type="text" placeholder="Search..."
+            class="w-full mt-2 px-3 py-1 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-green-300">
+    </div>
+</nav>

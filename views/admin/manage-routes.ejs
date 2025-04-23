@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Routes | KL-Easy Trip</title>
+    <%- include("partials/head") %>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navbar -->
+    <%- include("partials/navbar") %>
+
+        <!-- Header -->
+        <section class="bg-green-800 text-white py-6 px-8">
+            <div class="max-w-7xl mx-auto">
+                <h1 class="text-2xl font-bold">Manage Routes</h1>
+            </div>
+        </section>
+
+        <!-- Route Table -->
+        <section class="py-10 px-6 max-w-7xl mx-auto">
+            <div class="bg-white p-6 rounded shadow">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-semibold">Route List</h2>
+                    <a href="/routes/add" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm">
+                        + Add New Route
+                    </a>
+                </div>
+
+                <table class="min-w-full border text-sm">
+                    <thead>
+                        <tr class="bg-gray-100 text-left">
+                            <th class="px-4 py-2 border">From</th>
+                            <th class="px-4 py-2 border">To</th>
+                            <th class="px-4 py-2 border">Distance</th>
+                            <th class="px-4 py-2 border">Price (₹)</th>
+                            <th class="px-4 py-2 border text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% routes.forEach(route=> { %>
+                            <tr class="border-b">
+                                <td class="px-4 py-2">
+                                    <%= route.from %>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <%= route.to %>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <%= route.distanceKm %> km
+                                </td>
+                                <td class="px-4 py-2">₹<%= route.price %>
+                                </td>
+                                <td class="px-4 py-2 text-center whitespace-nowrap">
+                                    <a href="/routes/edit/<%= route._id %>"
+                                        class="text-blue-600 hover:underline mr-2">Edit</a>
+                                    <form action="/routes/delete/<%= route._id %>" method="POST" class="inline">
+                                        <button type="submit" class="text-red-600 hover:underline">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+</body>
+
+</html>

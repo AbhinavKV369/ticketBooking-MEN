@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Buses | KL-Easy Trip</title>
+<%- include("partials/head") %>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navbar -->
+    <%- include("partials/navbar") %>
+
+        <!-- Header -->
+        <section class="bg-green-800 text-white py-6 px-8">
+            <div class="max-w-7xl mx-auto">
+                <h1 class="text-2xl font-bold">Manage Buses</h1>
+            </div>
+        </section>
+
+        <!-- Bus List -->
+        <section class="py-10 px-6 max-w-7xl mx-auto">
+            <div class="bg-white p-6 rounded shadow">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-semibold">Bus List</h2>
+                    <a href="/buses/add-bus" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 text-sm">
+                        + Add New Bus
+                    </a>
+                </div>
+
+                <table class="min-w-full border text-sm">
+                    <thead>
+                        <tr class="bg-gray-100">
+                            <th class="text-left px-4 py-2 border">Name</th>
+                            <th class="text-left px-4 py-2 border">Number</th>
+                            <th class="text-left px-4 py-2 border">Type</th>
+                            <th class="text-left px-4 py-2 border">Seats</th>
+                            <th class="text-left px-4 py-2 border">Available</th>
+                            <th class="text-left px-4 py-2 border">Route</th>
+                            <th class="text-left px-4 py-2 border">Departure</th>
+                            <th class="text-left px-4 py-2 border">Arrival</th>
+                            <th class="text-center px-4 py-2 border">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% buses.forEach(bus=> { %>
+                            <tr class="border-b">
+                                <td class="px-4 py-2">
+                                    <%= bus.busName %>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <%= bus.busNumber %>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <%= bus.type %>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <%= bus.totalSeats %>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <%= bus.availableSeats || 'N/A' %>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <%= bus.route ? `${bus.route.from} → ${bus.route.to}` : 'N/A' %>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <%= bus.departureTime %>
+                                </td>
+                                <td class="px-4 py-2">
+                                    <%= bus.arrivalTime %>
+                                </td>
+                                <td class="px-4 py-2 text-center">
+                                    <a href="/buses/edit/<%= bus._id %>"
+                                        class="text-blue-600 hover:underline mr-2">Edit</a>
+                                    <form action="/buses/delete/<%= bus._id %>" method="POST" class="inline">
+                                        <button type="submit" class="text-red-600 hover:underline">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+</body>
+
+</html>

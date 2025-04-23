@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | View Bookings - KL-Easy Trip</title>
+    
+     <%- include("partials/head") %>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navbar -->
+    <%- include("partials/navbar") %>
+
+        <!-- Header -->
+        <section class="bg-green-800 text-white py-6 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                <h1 class="text-xl sm:text-2xl font-bold">All Bookings</h1>
+            </div>
+        </section>
+
+        <!-- Booking Table -->
+        <section class="py-6 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="bg-white p-4 sm:p-6 rounded shadow">
+                <h2 class="text-lg sm:text-xl font-semibold mb-4">Booking List</h2>
+                <div class="w-full overflow-x-auto">
+                    <table class="min-w-full border text-sm sm:text-base">
+                        <thead>
+                            <tr class="bg-gray-100 text-left">
+                                <th class="px-4 py-2 border">User</th>
+                                <th class="px-4 py-2 border">Bus</th>
+                                <th class="px-4 py-2 border">From → To</th>
+                                <th class="px-4 py-2 border">Date</th>
+                                <th class="px-4 py-2 border">Seats</th>
+                                <th class="px-4 py-2 border">Fare</th>
+                                <th class="px-4 py-2 border">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% bookings.forEach(booking=> { %>
+                                <tr class="border-b">
+                                    <td class="px-4 py-2">
+                                        <%= booking.user.name %>
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        <%= booking.bus.name %> (<%= booking.bus.busNumber %>)
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        <%= booking.route.from %> → <%= booking.route.to %>
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        <%= booking.date %>
+                                    </td>
+                                    <td class="px-4 py-2">
+                                        <%= booking.seats %>
+                                    </td>
+                                    <td class="px-4 py-2">₹<%= booking.fare %>
+                                    </td>
+                                    <td
+                                        class="px-4 py-2 <%= booking.status === 'Cancelled' ? 'text-red-500' : 'text-green-600' %>">
+                                        <%= booking.status %>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+</body>
+
+</html>

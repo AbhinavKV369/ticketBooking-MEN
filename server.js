@@ -7,7 +7,9 @@ require("dotenv").config();
 const dbConfig = require("./config/dbConfig");
 
 const userRoutes = require("./routes/user");
-const homeRoutes = require("./routes/home")
+const homeRoutes = require("./routes/home");
+
+const adminRoutes = require("./routes/admin");
 
 
 PORT = process.env.PORT ;
@@ -21,6 +23,8 @@ app.use(cookieParser());
 app.use(express.static(path.resolve("public")));
 
 app.use("/",userRoutes,homeRoutes);
+
+app.use('/admin', adminRoutes);
 
 
 app.set("view engine","ejs");

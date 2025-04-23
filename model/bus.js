@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const busSchema = new mongoose.Schema({
-  name: String,
+  busName: String,
   busNumber: String,
   type: {
     type: String,
